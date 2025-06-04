@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <i class="bi bi-collection"></i> PhotoGallery
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="currentPage === 'home'"
+             (click)="navigateTo('home')" href="#"
+             [class.disabled]="isLoading">
+            <i class="bi" [class.bi-house-door]="!isLoading" 
+               [class.bi-arrow-clockwise]="isLoading && currentPage === 'home'"></i>
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="currentPage === 'gallery'"
+             (click)="navigateTo('gallery')" href="#"
+             [class.disabled]="isLoading">
+            <i class="bi" [class.bi-grid]="!isLoading"
+               [class.bi-arrow-clockwise]="isLoading && currentPage === 'gallery'"></i>
+            Gallery
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="currentPage === 'about'"
+             (click)="navigateTo('about')" href="#"
+             [class.disabled]="isLoading">
+            <i class="bi" [class.bi-info-circle]="!isLoading"
+               [class.bi-arrow-clockwise]="isLoading && currentPage === 'about'"></i>
+            About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="currentPage === 'contact'"
+             (click)="navigateTo('contact')" href="#"
+             [class.disabled]="isLoading">
+            <i class="bi" [class.bi-envelope]="!isLoading"
+               [class.bi-arrow-clockwise]="isLoading && currentPage === 'contact'"></i>
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div *ngIf="navError" class="alert alert-danger alert-dismissible fade show m-3" role="alert">
+  <i class="bi bi-exclamation-triangle-fill me-2"></i>
+  Navigation failed. Please try again.
+  <button type="button" class="btn-close" (click)="navError = false" aria-label="Close"></button>
+</div>

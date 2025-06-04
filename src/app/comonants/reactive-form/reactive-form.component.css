@@ -1,0 +1,115 @@
+form {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+div {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+input {
+  padding: 12px;
+  font-size: 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+input.ng-touched.ng-invalid {
+  border-color: #e74c3c;
+  background-color: #fff5f5;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 6px;
+  padding-left: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.error-message::before {
+  content: "⚠️";
+  margin-right: 6px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"] {
+  background-color: #3498db;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+button[type="submit"]:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+button[type="button"] {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+button[type="button"]:hover {
+  background-color: #bdc3c7;
+}
+
+.success-message {
+  color: #27ae60;
+  background-color: #e8f5e9;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 16px;
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-message::before {
+  content: "✓";
+  margin-right: 8px;
+  font-weight: bold;
+}

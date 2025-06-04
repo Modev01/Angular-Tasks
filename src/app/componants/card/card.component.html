@@ -1,0 +1,71 @@
+<!-- <div class="card" style="width: 18rem;">
+    <img [src]="postData.image" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">{{postData.title}}</h5>
+    <p class="card-text">{{postData.text}}</p>
+    <a class="btn" [ngClass]="postData.active? 'btn-success' : 'btn-secondary' " 
+    (click)="toggleActive()"
+    >{{postData.active? 'Like' : 'Unlike'}}</a>
+  </div>
+</div>
+ -->
+
+<!-- <div *ngIf="!isDeleted" class="card shadow rounded position-relative" style="width: 18rem;">
+<div class="card shadow rounded position-relative" style="width: 18rem;">
+  
+  <img [src]="postData.image" class="card-img-top" alt="Post Image">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  
+  <button class="btn btn-light btn-sm position-absolute top-0 end-0 m-2 rounded-circle shadow"
+          style="z-index: 10;"
+           (click)="deletePost()" title="Delete Post">
+    <i class="bi bi-trash-fill text-danger"></i>
+  </button>
+
+  
+  <div class="card-body">
+    <h5 class="card-title">{{ postData.title }}</h5>
+    <p class="card-text">{{ postData.text }}</p>
+
+    <a class="btn w-100"
+       [ngClass]="postData.active ? 'btn-success' : 'btn-secondary'"
+       (click)="toggleActive()">
+      <i class="bi" [ngClass]="postData.active ? 'bi-hand-thumbs-up-fill' : 'bi-hand-thumbs-down'"></i>
+      {{ postData.active ? 'Like' : 'Unlike' }}
+    </a>
+  </div>
+</div>
+</div> -->
+<div *ngIf="!isDeleted" class="card shadow rounded position-relative">
+  <!-- Card Image -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <img [src]="postData.image"
+       class="card-img-top"
+       alt="Post Image">
+
+  <!-- Delete Icon -->
+  <i class="bi bi-trash-fill text-danger position-absolute top-0 end-0 m-3 fs-5"
+     role="button"
+     style="z-index: 10;"
+     (click)="deletePost()"
+     title="Delete Post"></i>
+
+  <!-- Card Body -->
+  <div class="card-body">
+    <h5 class="card-title">{{ postData.title }}</h5>
+    <p class="card-text">{{ postData.text }}</p>
+
+    <a class="btn w-100"
+       [ngClass]="postData.active ? 'btn-success' : 'btn-secondary'"
+       (click)="toggleActive()">
+      <i class="bi" [ngClass]="postData.active ? 'bi-hand-thumbs-up-fill' : 'bi-hand-thumbs-down'"></i>
+      {{ postData.active ? 'Like' : 'Unlike' }}
+    </a>
+  </div>
+</div>
+
+
+
+
